@@ -1,7 +1,7 @@
 'use strict';
 
 class Storage {
-  #items;
+  #items = [];
 
   getItems() {
     return this.#items;
