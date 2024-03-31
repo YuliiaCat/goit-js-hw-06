@@ -1,9 +1,7 @@
 'use strict';
 
 class StringBuilder {
-  #value = {
-    initialValue
-  };
+  #value;
 
   constructor(value) {
     this.#value = value;
@@ -14,14 +12,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
+    this.#value = `${str}${this.#value}`;
   }
 
   padStart(str) {
-
+    this.#value = `${this.#value}${str}`;
   }
 
   padBoth(str) {
-
+    this.#value = `${str}${this.#value}${str}`;
   }
 
 }
